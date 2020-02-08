@@ -1,0 +1,21 @@
+def squares_of_number(number):
+    lst = []
+    number = number ** 0.5
+    num = 1
+    while num < number:
+         Squares_num = num * num
+         print(Squares_num)
+         lst.append(Squares_num)
+         num = num + 1
+     
+def get_number():
+    Number = input("Enter a number : ")
+    Number = float(Number)
+    return Number
+
+def main():
+    Number = get_number()
+    squares_of_number(Number)
+
+#Main starts from here
+main()
