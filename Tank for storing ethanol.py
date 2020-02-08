@@ -1,15 +1,12 @@
-"""
-A Chemical plant has a tank for storing ethanol
-"""
-
-def tank(num1, num2, num3):
-    if num1 > num2:
+def tank(num1, num2):
+    Litres = (num1 / num2) * 100
+    print("Litres in percentage : ", Litres)
+    if Litres > 80:
         print("Alarm to close the valve!!!")
-    elif num1 < num3:
+    elif Litres < 20:
         print("Need to buy more liquid to fill up the tank!!")
     else:
         print("Everything is ok")
-    
 
 def get_valve():
     num1 = input("Enter current level of ethanol in the tank : ")
@@ -18,10 +15,8 @@ def get_valve():
 
 def main():
     Tank_capacity = 900
-    Range1 = 80
-    Range2 = 20
     Valve = get_valve()
-    tank(Valve , Range1, Range2)
+    tank(Valve , Tank_capacity)
 
 #Main starts from here
 main()
