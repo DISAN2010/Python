@@ -1,9 +1,9 @@
 def tank(num1, num2):
-    Litres = (num1 / num2) * 100
-    print("Litres in percentage : ", Litres)
-    if Litres > 80:
+    Litres_percentage = (num1 / num2) * 100
+    print("Litres in percentage : ", Litres_percentage)
+    if Litres_percentage > 80:
         print("Alarm to close the valve!!!")
-    elif Litres < 20:
+    elif Litres_percentage < 20:
         print("Need to buy more liquid to fill up the tank!!")
     else:
         print("Everything is ok")
