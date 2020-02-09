@@ -14,7 +14,8 @@ def get_valve():
     return num1
 
 def main():
-    Tank_capacity = 900
+    Tank_capacity = input("Total capacity of tank in litres : ")
+    Tank_capacity = int(Tank_capacity)
     Valve = get_valve()
     tank(Valve , Tank_capacity)
 
