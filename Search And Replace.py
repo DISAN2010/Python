@@ -1,22 +1,18 @@
-def search_replace(txt1):
-    words = txt1
-    words_split = words.split()
-    search_word = input("Enter the word to search : ")
-    replace_word = input("Enter the word to replace with : ")
-    for x in range(0,len(words_split)):
-        if words_split[x] == search_word:
-            words_split[x] = words_split[x].replace(search_word, replace_word)
-    str1 = ' '.join(words_split)
-    print(str1)
-            
-    
+def search_replace(txt1, str1, str2):
+    print("Text what you have typed : ", txt1)
+    if str1 in txt1:
+        txt = txt1.replace(str1, str2)
+        print("Text after replaced word : ", txt)
+        
 def get_text():
     Text = input("Start typing : ")
-    return Text
+    Search_word = input("Word to search : ")
+    Replace_word = input("Word to replace ; ")
+    return Text, Search_word, Replace_word
 
 def main():
-    Text = get_text()
-    search_replace(Text)
+    Text, Search_word, Replace_word = get_text()
+    search_replace(Text, Search_word, Replace_word)
 
 #Main starts from here
 main()
