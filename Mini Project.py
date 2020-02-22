@@ -33,25 +33,29 @@ def passcode(Random_num, num1):
         count +=1
 
     else:
-        if num1 > 0 and num1 < b:
-            print("invalid passcode")
-        elif num1 > d:
-            print("INVALID PASSCODE")
-        else:
-            print("InVaLiD PaSsCoDe")
-
-        for x in lst:
-            if x == a or x == b or x == c or x == d:
-                num1 = input("Enter Passcode : ")
-                num1 = int(num1)
+        while count == attempts:
+            if num1 > 0 and num1 < b:
+                print("invalid passcode") 
+            elif num1 > d:
+                print("INVALID PASSCODE")
+            elif num1 == a or num1 == b or num1 == c or num1 == d:
+                print("InVaLiD PaSsCoDe")
+            elif num1 == Random_num:
+                print("Welcome!!!")
                 break
-        if num1 == Random_num:
-            print("Welcome!!!")
-        else:
-            print("Login FAILED!!!")    
+            count += 1
+        else:    
+            for x in lst:
+                if x == a or x == b or x == c or x == d:
+                    num1 = input("Enter Passcode : ")
+                    num1 = int(num1)
+                    if num1 == Random_num:
+                        print("Welcome!!!")
+                    else:
+                        print("Login FAILED!!!")
 
 def get_numbers():
-    random_no = input("Random number : ")
+    random_no = input("Choose Random number : ")
     random_no = int(random_no)
     number = input("Enter Passcode : ")
     number = int(number)    
