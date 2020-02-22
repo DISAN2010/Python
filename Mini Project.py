@@ -1,5 +1,6 @@
 def passcode(Random_num, num1):
     lst = []
+    lst.append(num1)
     
     a = Random_num - 1
     b = Random_num - 2
