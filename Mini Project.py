@@ -37,6 +37,8 @@ def passcode(Random_num, num1):
             print("invalid passcode")
         elif num1 > d:
             print("INVALID PASSCODE")
+        else:
+            print("InVaLiD PaSsCoDe")
 
         for x in lst:
             if x == a or x == b or x == c or x == d:
@@ -49,7 +51,7 @@ def passcode(Random_num, num1):
             print("Login FAILED!!!")    
 
 def get_numbers():
-    random_no = input("Choose Random number : ")
+    random_no = input("Random number : ")
     random_no = int(random_no)
     number = input("Enter Passcode : ")
     number = int(number)    
