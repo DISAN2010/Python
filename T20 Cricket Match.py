@@ -1,3 +1,15 @@
+"""
+S06Q02 : T20 Cricket Match
+     - Collect the runs scored for each ball faced by the batsman. 
+              A dot ball is represented by a dot in input. 
+              An empty line represents a wicket. 
+
+          - Find the total runs scored by the batsman
+          - Find the strike rate of the batsman [ runs scored/balls faced ]
+          - Find the number of balls wasted by the batsman
+          - How many boundaries and sixes did he score ?
+"""
+
 def statistics(lst1):
     Balls_faced = len(lst1)
     print("Balls faced : ", Balls_faced)
@@ -41,18 +53,16 @@ def match(num1):
         statistics(lst)
     
 def get_number():
-    Number = input("Runs scored for the current ball : ")
+    Number = input("Runs scored by the batsmen : ")
     Number = str(Number)
     return Number
 
 def main():
     Number = get_number()
-    for x in Number:
-        if x == '':
-            print("Out for the first ball")
-            break
-        else:
-            match(Number)    
+    if Number == '':
+        print("Out for the first ball")
+    else:
+        match(Number)    
     
 #Main starts from here
 main()
