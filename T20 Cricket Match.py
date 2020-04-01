@@ -10,59 +10,46 @@ S06Q02 : T20 Cricket Match
           - How many boundaries and sixes did he score ?
 """
 
-def statistics(lst1):
-    Balls_faced = len(lst1)
-    print("Balls faced : ", Balls_faced)
-    Dots = 0
-    Fours = 0
-    Sixes = 0
-    for x in lst1:
-        if x == '0':
-            Dots = Dots + 1
-        elif x == '4':
-            Fours = Fours + 1
-        elif x == '6':
-            Sixes = Sixes + 1
-            
-    Balls_faced = int(Balls_faced)
-    lst1 = [int(i) for i in lst1[:-1]]
-    Total_score = sum(lst1)
-    print("Total score is : ", Total_score)
-    Strike_rate = (Total_score / Balls_faced) * 100
-    print("Strike rate is : ", Strike_rate)
-
-    print("No. of balls wasted : ", Dots + 1)
-    print("No. of fours : ", Fours)
-    print("No. of sixes : ", Sixes)
-        
-def match(num1):
-        infinity = str('inf')
-        lst = []
-        lst.append(num1)
-        while num1 < infinity:
-            if num1 == '':
-                print("Out he is gone")
-                break
-            else:
-                num1 = input("Runs scored by the batsmen : ")
-                num1 = str(num1)
-                if num1 == '.':
-                    num1 = num1.replace(".", "0")
-                lst.append(num1)
-
-        statistics(lst)
+def statistics(lst):
+    lst = [int(x) for x in lst[:-1]]
+    Total_runs = sum(lst)
+    Balls = len(lst) + 1 
+    Strike_rate = (Total_runs / Balls) * 100
+    Balls_wasted = lst.count(0) + 1
+    Fours = lst.count(4)
+    Sixes = lst.count(6)
+    print("Total runs scored by batsmen : ", Total_runs)
+    print("Strike rate of the batsmen : ", Strike_rate)
+    print("Balls wasted by batsmen : ", Balls_wasted)
+    print("Fours scored by batsmen : ", Fours)
+    print("Sixes scored by batsmen : ", Sixes)
     
-def get_number():
-    Number = input("Runs scored by the batsmen : ")
-    Number = str(Number)
-    return Number
+def match(run):
+    lst = []
+    lst.append(run)
+    while 1:
+        if run == '':
+            print("Out he is gone")
+            break
+        else:
+            run = get_run()
+            lst.append(run)
+
+    statistics(lst)
+
+def get_run():
+    run = input("Runs scored by batsmen : ")
+    if run == '.':
+        run = run.replace('.', '0')
+    return run
 
 def main():
-    Number = get_number()
-    if Number == '':
+    Run = get_run()
+    while Run == '':
         print("Out for the first ball")
+        break
     else:
-        match(Number)    
-    
+        match(Run)
+
 #Main starts from here
 main()
