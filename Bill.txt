@@ -1,0 +1,27 @@
+# Your Super Market Itemised Bill
+=====================
+Sl.  Item    : Amount 
+=====================
+1.  Milk     :   40
+2.  Onion    :  100
+3.  Sugar    :  150
+4.  Rice     :  200
+5.  Daal     :   80
+6.  Salt     :   20
+7.  Flour    :  250
+8.  Tea      :   50
+9.  Cashew   :   80
+10. Turmeric :   30
+11. Oil      :  230
+12. Masala   :   40
+13. Coffee   :  100
+14. Soaps    :  100
+15. Shampoo  :   60
+16. Paste    :   50
+
+=====================
+TOTAL        : 1580 
+=====================
+
+# All amounts include GST
+# Please visit again
